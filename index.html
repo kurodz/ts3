@@ -70,6 +70,7 @@ $(document).ready(function(){
     	
   $("button").click(function(){
 	$(".button").prop("disabled",true);
+	$("#nickname").fadeOut();  
 	var nickname = $("#nickname").val();
 	if (nickname != null && nickname != '') {                      $("#w3s").attr("href","ts3server://211.22.167.48?port=9987" + "&nickname=" + nickname);setTimeout( function(){ window.top.close()  }  , 6000 );CountDown();
                 } else {  

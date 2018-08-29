@@ -1,0 +1,79 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Teamspeak</title>
+</head>
+<style>
+body {
+    background-image: url("https://wallpapercave.com/wp/eFb8D5a.png");
+}
+	div {
+		width: 200px;
+		height: 200px;
+		position:absolute;
+		left:50%;
+		top:10%;
+		margin-left:-150px;
+
+	}
+.button {
+	width: 100%;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+	border-radius: 12px;
+	background-color: #008CBA;
+}
+#nickname{
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+	}
+	</style>
+<script
+  src="https://code.jquery.com/jquery-3.3.1.js"
+  integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+  crossorigin="anonymous"></script>
+<script>
+var CountDownSecond = 6;
+function CountDown() {
+if (CountDownSecond !=0) {
+CountDownSecond -= 1;
+$(".button").html("視窗關閉倒數 " + CountDownSecond + " 秒");
+} else {
+$(".button").html("視窗關閉！");
+return;
+}
+setTimeout("CountDown()",1000);
+}
+$(document).ready(function(){
+    	
+  $("button").click(function(){
+	var nickname = $("#nickname").val();
+	if (nickname != null && nickname != '') {                      $("#w3s").attr("href","ts3server://211.22.167.48?port=9987" + "&nickname=" + nickname);setTimeout( function(){ window.top.close()  }  , 6000 );CountDown();
+                } else {  
+                    alert('操你媽不打名字是怎樣')  
+                }
+
+  });
+});
+</script>
+<body>
+<div>
+<img src="https://i.imgur.com/FkSfW0X.png" width="200px" height="200px"><br>
+<input name="nickname" type="text" id="nickname" placeholder="暱稱"><br>	
+<a href="" id="w3s"><button class="button">連線</button></a>
+</div>
+</body>
+</html>

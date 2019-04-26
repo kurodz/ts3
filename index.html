@@ -25,7 +25,7 @@ body {
 		margin-top:20px;
 	}
 	#store img {
-		margin-left: 8px;
+		margin-left: 185px;
 	}
 .button {
 	width: 100%;
@@ -67,18 +67,13 @@ return;
 }
 setTimeout("CountDown()",1000);
 }
-$(document).ready(function(){
-    	
+$(document).ready(function(){    	
   $("button").click(function(){
 	$(".button").prop("disabled",true);
 	$("#nickname").fadeOut();  
 	var nickname = $("#nickname").val();
-	if (nickname != null && nickname != '') {                      $("#w3s").attr("href","ts3server://211.22.167.48?port=9987" + "&nickname=" + nickname);setTimeout( function(){ window.top.close()  }  , 6000 );CountDown();
-                } else {  
-                    alert('操你媽不打名字是怎樣')  
-                }
-
-  });
+	if (nickname != null && nickname != '') {                     $("#w3s").attr("href","ts3server://211.22.167.48?port=9987" + "&nickname=" + nickname);setTimeout( function(){window.top.close()}  , 6000 );CountDown();} 
+	  else {alert('操你媽不打名字是怎樣')}});
 });
 </script>
 <body>
@@ -89,9 +84,7 @@ $(document).ready(function(){
 <a href="" id="w3s"><button class="button">連線</button></a>
 </div>
 <div id="store">
-	<a href="https://itunes.apple.com/app/teamspeak-3/id577628510" target="_blank"><img src="http://bccie.bc.ca/wp-content/uploads/2018/05/App-Store-icon.png" width="150px" height="50px"></a>
-	<a href="https://play.google.com/store/apps/details?id=com.teamspeak.ts3client" target="_blank"><img src="https://cdn-images-1.medium.com/max/1200/1*OIIv4FEjJQMqh-zEPhtlYA.png" width="150px" height="50px"></a>
-	<a href="http://dl.4players.de/ts/releases/3.2.3/TeamSpeak3-Client-win32-3.2.3.exe"><img src="https://www.unifiedremote.com/content/images/badge-wp.png" width="150px" height="50px"></a>
+	<a href="http://dl.4players.de/ts/releases/3.2.5/TeamSpeak3-Client-win32-3.2.5.exe"><img src="https://cdn.pixabay.com/photo/2016/02/08/19/52/button-1187460_960_720.png" width="150px" height="80px"></a>
 </div>
 </div>
 </body>

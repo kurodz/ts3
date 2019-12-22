@@ -72,8 +72,13 @@ $(document).ready(function(){
 	$(".button").prop("disabled",true);
 	$("#nickname").fadeOut();  
 	var nickname = $("#nickname").val();
-	if (nickname != null && nickname != '') {                     $("#w3s").attr("href","ts3server://211.22.167.48?port=9987" + "&nickname=" + nickname);setTimeout( function(){window.top.close()}  , 6000 );CountDown();} 
-	  else {alert('操你媽不打名字是怎樣')}});
+	if(nickname.length < 3){alert("請取三個字以上的暱稱")}
+	  else if (nickname.length>10){alert("暱稱過長")}
+	  else {
+	  	if (nickname != null && nickname != '')
+		{$("#w3s").attr("href","ts3server://211.22.167.48?port=9987" + "&nickname=" + nickname);setTimeout(function(){window.top.close()},6000);CountDown();}
+	  	else {alert('操你媽不打名字是怎樣')}}
+  });
 });
 </script>
 <body>
